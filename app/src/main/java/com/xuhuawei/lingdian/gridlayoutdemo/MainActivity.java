@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<RecomendCarBean> recomendCarList=new ArrayList<>();
     private EmptyCarBean bean;
     private NumberedAdapter adapter;
-    private TextView text_content;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_empty.setOnClickListener(this);
         btn_add.setOnClickListener(this);
 
-        text_content= (TextView) findViewById(R.id.text_content);
 
 
 
@@ -135,12 +133,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int btnId=view.getId();
         switch (btnId){
             case R.id.btn_add:
-                text_content.append(" Hello World ");
-//                setAddCarData();
+                setAddCarData();
                 break;
             case R.id.btn_empty:
-                text_content.setText("");
-//                setEmptyCar();
+                setEmptyCar();
                 break;
         }
     }
